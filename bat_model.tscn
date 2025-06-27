@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c41y35ofmjid"]
+
+[ext_resource type="PackedScene" uid="uid://dmodkg7pjd2ql" path="res://Assets/mob/bat/bat_model.glb" id="1_nqdqv"]
+[ext_resource type="Script" uid="uid://dops5flcybcd1" path="res://Scenes/Scripts/bat_model.gd" id="2_r07ig"]
+
+[node name="bat_model" instance=ExtResource("1_nqdqv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("2_r07ig")
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0, -0.0074, 0)
+bones/1/rotation = Quaternion(-0.0286549, 0.188485, -0.686718, 0.701478)
+bones/2/rotation = Quaternion(-0.0560154, -0.016041, 0.274838, 0.959723)
+bones/3/rotation = Quaternion(0.0412136, 0.059985, 0.264753, 0.961566)
+bones/4/rotation = Quaternion(-0.0286549, -0.188485, 0.686718, 0.701478)
+bones/5/rotation = Quaternion(-0.0560154, 0.016041, -0.274838, 0.959723)
+bones/6/rotation = Quaternion(0.0412136, -0.059985, -0.264753, 0.961566)
+bones/7/position = Vector3(0.130992, -0.227392, -0.0878515)
+bones/7/rotation = Quaternion(0.261968, 0.0834551, 0.265751, 0.924004)
+bones/8/rotation = Quaternion(3.84334e-08, 0.690882, 0.722967, 1.64515e-08)
+bones/10/position = Vector3(-0.130992, -0.227392, -0.0878515)
+bones/10/rotation = Quaternion(0.261968, -0.0834551, -0.265751, 0.924004)
+bones/11/rotation = Quaternion(2.54238e-08, 0.690882, 0.722967, 3.63776e-08)
+
+[node name="bat" parent="Armature/Skeleton3D" index="0"]
+transform = Transform3D(-0.999754, 0, 0.0221639, 0, 1, 0, -0.0221639, 0, -0.999754, 0, 0, 0)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Idle"
+next/Idle = &"Idle"
